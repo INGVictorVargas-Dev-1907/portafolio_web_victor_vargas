@@ -1,0 +1,86 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+@use 'sass:color';
+
+.experiencia, .educacion {
+    @include m.separacion;
+
+    &__titulo {
+        color: v.$blanco;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+
+    &__contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        
+        @include m.tablet {
+            @include m.grid(2, 3rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 3rem);
+        }
+    }
+
+    &__item {
+        background-color: color.adjust(v.$azulOscuro, $lightness: -3%);
+        box-shadow: 0px 0px 27px 0px rgba(20, 172, 199, 0.75);
+        padding: 3rem;
+        border-radius: 1rem;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            border-radius: 1rem;
+            background: linear-gradient(270deg, #a855f7, #3b82f6, #06b6d4, #3b82f6, #a855f7);
+            background-size: 400% 400%;
+            animation: runBorder 8s linear infinite;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+    }
+
+    &__rol, &__grado {
+        font-weight: 600;
+        color: v.$azulClaro;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    &__fecha {
+        font-size: 1.4rem;
+        color: v.$grisClaro;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    &__lista {
+        padding-left: 1.5rem;
+        list-style: disc;
+        color: v.$blanco;
+        line-height: 1.8;
+    }
+
+    p {
+        color: v.$gris;
+        line-height: 1.6;
+    }
+}

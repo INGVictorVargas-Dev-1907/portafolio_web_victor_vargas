@@ -1,0 +1,153 @@
+/* Estilos para el botón de descarga CV */
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+@use 'sass:color';
+
+/* Sección Descargar CV */
+.seccion-descargar-cv {
+    padding: 3rem 1rem;
+}
+
+.contenedor-descarga {
+    position: relative;
+        border-radius: 1rem;
+        padding: 3rem;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            border-radius: 1rem;
+            background: linear-gradient(
+                270deg,
+                #a855f7,
+                #3b82f6,
+                #06b6d4,
+                #3b82f6,
+                #a855f7
+            );
+            background-size: 400% 400%;
+            animation: runBorder 8s linear infinite;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+    }
+
+
+.cuadro-descarga {
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(20, 172, 199, 0.1);
+    border: 2px solid #e2f5f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.cuadro-descarga::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #14ACC7, #0E8EA8);
+}
+
+.titulo-descarga {
+    font-size: 2.3rem;
+    color: #f8fafd;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.texto-descarga {
+    font-size: 1.3rem;
+    color: #f9fafc;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boton-descarga-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.8rem;
+    background: linear-gradient(135deg, #14ACC7, #0E8EA8);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(20, 172, 199, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-descarga-cv:hover {
+    background-color: #0E8EA8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(20, 172, 199, 0.4);
+}
+
+.boton-descarga-cv:active {
+    background-color: white !important;
+    color: #14ACC7 !important;
+    border: 2px solid #14ACC7 !important;
+}
+
+.boton-descarga-cv:active svg {
+    fill: #14ACC7 !important;
+}
+
+.boton-descarga-cv::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(250, 237, 237, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.boton-descarga-cv:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+.boton-descarga-cv svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.boton-descarga-cv:hover svg {
+    transform: translateY(3px);
+}

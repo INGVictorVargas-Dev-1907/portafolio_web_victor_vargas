@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio web de Víctor Vargas Díaz, desarrollador FullStack especializado en Front-end y Back-end."> <meta name="keywords" content="Víctor Vargas Díaz, desarrollador web, FullStack, Front-end, Back-end, HTML, CSS, JavaScript, React, Angular, Python, Django, FastAPI, Java, Spring Boot, Node.js, Express, SQL, MySQL, MongoDB, PostgreSQL, AWS, Firebase, JWT, OAuth, Gulp, Figma, Bootstrap, Tailwind CSS, SASS, portafolio"> <meta name="author" content="Víctor Vargas Díaz"> <link rel="icon" href="build/img/favicon.ico" type="image/x-icon"> <link rel="preload" href="build/css/app.css" as="style">
+    <link rel="stylesheet" href="build/css/app.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" crossorigin="anonymous" as="font"> <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>Mi Portafolio Web - Víctor Vargas Díaz</title> </head>
+  <body>
+      <div class="contenedor">
+        <header class="header">
+              <div data-aos="fade-right">
+              <div class="header__logo">
+                  <h1 class="m-0"><span> Víctor  Vargas Díaz</span></h1>
+              </div>
+              </div>
+
+              <div data-aos="fade-left">
+              <nav class="navegacion">
+                  <a href="#presentacion" class="navegacion__enlace">Sobre mi</a>
+                  <a href="#seccion-descargar-cv" class="navegacion__enlace">Curriculum</a>
+                  <a href="#habilidades" class="navegacion__enlace">Habilidades</a>
+                  <a href="#experiencia" class="navegacion__enlace">Experiencia</a>
+                  <a href="#educacion" class="navegacion__enlace">Educación</a>
+                  <a href="#servicios" class="navegacion__enlace">Servicios</a>
+                  <a href="#proyectos" class="navegacion__enlace">Proyectos</a>
+                  <a href="#referencias" class="navegacion__enlace">Referencias</a>
+                  <a href="#contacto" class="navegacion__enlace">Contácto</a>
+              </nav>
+              </div>
+        </header>
+      <section id="presentacion" class="presentacion">
+            <div data-aos="fade-right">
+              <div class="presentacion__info">
+                <h2 class="m-0">Hola, Soy Victor Vargas Diaz</h2>
+                <p class="presentacion__posicion" id="typed"></p>
+                <p class="presentacion__texto">
+                    Soy VÍCTOR ALFONSO VARGAS DIAZ, un desarrollador Full Stack con experiencia en la creación, diseño,
+                    implementación y administración de aplicaciones web modernas y escalables. Tengo sólidos conocimientos en el
+                    desarrollo de interfaces interactivas y manejo básico de estado con servicios y observables.
+                    Me impulsa el aprendizaje constante, la innovación en diseño y el deseo de aportar soluciones efectivas a través del código, 
+                    que ayuden a solucionar problemas sociales o en enfoques laborales para una empresa.
+                </p>
+                
+                <div class="presentacion__redes">
+                  <a href="https://www.linkedin.com/in/𝚅𝚒𝚌𝚝𝚘𝚛-𝙰𝚕𝚏𝚘𝚗𝚜𝚘-𝚅𝚊𝚛𝚐𝚊𝚜-diaz-6b853a355" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Víctor Vargas">
+                    <div class="linkedin">
+                      <div class="circular">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-labelledby="linkedin-title">
+                              <title id="linkedin-title">LinkedIn</title>
+                              <path
+                                  fill="#14ACC7"
+                                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                              />
+                            </svg>
+                        </div>
+                            <!-- circular -->
+                      </div>
+                    <!-- linkedin -->
+                  </a>
+                  <a href="https://github.com/INGVictorVargas-Dev-1907" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Víctor Vargas">
+                      <div class="github">
+                        <div class="circular">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" role="img" aria-labelledby="github-title">
+                            <title id="github-title">GitHub</title>
+                            <path
+                              fill="#14ACC7"
+                              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                            />
+                          </svg>
+                        </div>
+                        <!-- circular -->
+                      </div>
+                      <!-- github -->
+                  </a>
+
+                  <a href="mailto:victor19vargas2018@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo electrónico a Víctor Vargas">
+                    <div class="gmail">
+                        <div class="circular">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="gmail-title">
+                              <title id="gmail-title">Correo Electrónico</title>
+                                <path
+                                    fill="#14ACC7"
+                                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                                />
+                            </svg>
+                        </div>
+                        <!-- circular -->
+                    </div>
+                    <!-- gmail -->
+                  </a>
+                </div>
+                <!-- presentacion_redes -->
+              </div>
+              <!-- presentacion_info -->
+            </div>
+
+            <div class="perfil" data-aos="fade-left">
+              <div class="perfil__circular">
+                <img
+                  loading="lazy"
+                  src="build/img/FOT...3X4 .jpg"
+                  alt="Foto de perfil de Víctor Vargas"
+                  class="perfil__imagen"
+                />
+              </div>
+            </div>
+      </section>
+
+      <!-- Sección Descargar CV -->
+      <section id="seccion-descargar-cv" class="seccion-descargar-cv">
+          <div class="contenedor-descarga">
+              <div class="cuadro-descarga">
+                  <h3 class="titulo-descarga">¿Te interesa mi perfil profesional?</h3>
+                  <p class="texto-descarga">Descarga mi currículum completo para más detalles</p>
+                  <a href="src/cv/CV_VictorVargasDiaz.100-2025-15-07.pdf" download="CV_Victor_Vargas_Diaz.pdf" class="boton-descarga-cv">
+                      DESCARGAR CV
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="currentColor" d="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5zm-7 4v-2h14v2H5z"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </section>
+
+      <main id="habilidades" class="habilidades" data-aos="fade-up">
+            <h2>Habilidades y Herramientas</h2>
+            <div class="habilidades__contenedor">
+              <div class="habilidades__grid">
+                <div class="js" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/JavaScript_logo.webp"
+                    alt="logo de js"
+                  />
+                  <p class="habilidades__nombre">JavaScript</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_java.png"
+                    alt="logo de java"
+                  />
+                  <p class="habilidades__nombre">Java</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_python.png"
+                    alt="logo de python"
+                  />
+                  <p class="habilidades__nombre">Python</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/PHP_logo.png"
+                    alt="logo de php"
+                  />
+                  <p class="habilidades__nombre">PHP</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_angular.png"
+                    alt="logo de angular"
+                  />
+                  <p class="habilidades__nombre">Angular</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_react.png"
+                    alt="logo de react"
+                  />
+                  <p class="habilidades__nombre">React JS</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_aws.png"
+                    alt="logo de aws"
+                  />
+                  <p class="habilidades__nombre">AWS</p>
+                </div>
+
+                <div class="gulp" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/gulp_logo.svg"
+                    alt="logo de gulp"
+                  />
+                  <p class="habilidades__nombre">Gulp</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/html_logo.webp"
+                    alt="logo de html"
+                  />
+                  <p class="habilidades__nombre">HTML 5</p>
+                </div>
+
+                <div class="css" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/CSS3_logo.webp"
+                    alt="logo css"
+                  />
+                  <p class="habilidades__nombre">CSS</p>
+                </div>
+
+                <div class="sass" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/Sass_Logo.webp"
+                    alt="logo sass"
+                  />
+                  <p class="habilidades__nombre">Sass</p>
+                </div>
+
+                <div class="boostrap" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/bootstrap__logo.webp"
+                    alt="logo boostrap"
+                  />
+                  <p class="habilidades__nombre">Bootstrap 5</p>
+                </div>
+
+                <div class="tailwind" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/tailwind__logo.webp"
+                    alt="logo boostrap"
+                  />
+                  <p class="habilidades__nombre">Tailwind Css</p>
+                </div>
+
+                <div class="node" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/node_logo.webp"
+                    alt="logo de nodejs"
+                  />
+                  <p class="habilidades__nombre">Node Js</p>
+                </div>
+
+                <div class="express" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_express1.png"
+                    alt="logo de express"
+                  />
+                  <p class="habilidades__nombre">Express</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_firebase.png"
+                    alt="logo de firebase"
+                  />
+                  <p class="habilidades__nombre">Firebase</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_quarkus.png"
+                    alt="logo de quarkus"
+                  />
+                  <p class="habilidades__nombre">Quarkus</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_django.png"
+                    alt="logo de Django"
+                  />
+                  <p class="habilidades__nombre">Django</p>
+                </div>
+                
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_fastApi.png"
+                    alt="logo de fastapi"
+                  />
+                  <p class="habilidades__nombre">FastApi</p>
+                </div>
+                
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_jwt.png"
+                    alt="logo de jwt"
+                  />
+                  <p class="habilidades__nombre">Autenticación JWT</p>
+                </div>
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_oauth.png"
+                    alt="logo de oauth"
+                  />
+                  <p class="habilidades__nombre">Autenticación OAUTH</p>
+                </div>
+                
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_sqlM_A_S_C.png"
+                    alt="logo de sql"
+                  />
+                  <p class="habilidades__nombre">SQL</p>
+                </div>
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_mongo.png"
+                    alt="logo de mongodb"
+                  />
+                  <p class="habilidades__nombre">Mongo DB</p>
+                </div>
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_mysql.png"
+                    alt="logo de mysql"
+                  />
+                  <p class="habilidades__nombre">MySQL</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_postgresql.png"
+                    alt="logo de postgresql"
+                  />
+                  <p class="habilidades__nombre">PostgreSQL</p>
+                </div>
+
+                <div class="vscode" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/vs_code.webp"
+                    alt="logo de vscode"
+                  />
+                  <p class="habilidades__nombre">Vs Code</p>
+                </div>
+
+                <div class="vscode" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo intellij.png"
+                    alt="logo de intellij idea"
+                  />
+                  <p class="habilidades__nombre">IntelliJ IDEA</p>
+                </div>
+
+                <div class="vscode" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_pycharm.png"
+                    alt="logo de PyCharm"
+                  />
+                  <p class="habilidades__nombre">PyCharm</p>
+                </div>
+
+                <div class="vscode" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_netbeans.png"
+                    alt="logo de PyCharm"
+                  />
+                  <p class="habilidades__nombre">Apache NetBeans</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_docker.png"
+                    alt="logo de docker"
+                  />
+                  <p class="habilidades__nombre">Docker</p>
+                </div>
+
+                <div class="html" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/logo_postman.png"
+                    alt="logo de postman"
+                  />
+                  <p class="habilidades__nombre">Postman</p>
+                </div>
+
+                <div class="figma" data-aos="fade-up">
+                  <img
+                    class="habilidades__img"
+                    loading="lazy"
+                    src="build/img/Figma_logo.webp"
+                    alt="logo de figma"
+                  />
+                  <p class="habilidades__nombre">Figma</p>
+                </div>
+              </div>
+            </div>
+      </main>
+
+      <section class="experiencia contenedor" id="experiencia">
+        <h2 class="experiencia__titulo">Experiencia Profesional</h2>
+        <div class="experiencia__contenedor">
+
+          <div class="experiencia__item" data-aos="fade-up">
+            <h3 class="experiencia__rol">Ingeniero de Análisis de Datos</h3>
+            <span class="experiencia__fecha">Incubaap - Proyecto Concert Plaza · Enero 2024 – Septiembre 2024</span>
+            <ul class="experiencia__lista">
+              <li>Investigación de APIs para la petición de la información requerida.</li>
+              <li>Recolección, limpieza, organización y unificación de datos.</li>
+              <li>Diseño e implementación de visualizaciones para análisis.</li>
+              <li>Presentación de datos analizados al grupo del proyecto.</li>
+              <li>Apoyo en la toma de decisiones basadas en patrones de datos.</li>
+            </ul>
+          </div>
+
+          <div class="experiencia__item" data-aos="fade-up">
+            <h3 class="experiencia__rol">Analista Junior de Ciberseguridad</h3>
+            <span class="experiencia__fecha">Todo en Electro José · Feb 2021 – Jul 2023 · Montería, Colombia</span>
+            <ul class="experiencia__lista">
+              <li>Revisión diaria de equipos de cómputo para detectar vulnerabilidades.</li>
+              <li>Prevención de pérdida de datos mediante herramientas de seguridad.</li>
+              <li>Mantenimiento activo de antivirus y autenticaciones.</li>
+              <li>Reporte técnico periódico del estado de los equipos.</li>
+            </ul>
+          </div>
+
+          <div class="experiencia__item" data-aos="fade-up">
+            <h3 class="experiencia__rol">Desarrollador Web Full Stack</h3>
+            <span class="experiencia__fecha">Freelancer · Proyecto Plataforma E-Commerce · Oct 2023 – Feb 2025</span>
+            <ul class="experiencia__lista">
+              <li>Desarrollo de e-commerce completo con Angular, React, Node.js, Express y MongoDB.</li>
+              <li>Interfaces responsivas con HTML5, CSS3, PHP, JS moderno, WordPress y React Hooks.</li>
+              <li>Backends RESTful con Node.js y FastAPI. Integración con MySQL, PostgreSQL y MongoDB.</li>
+              <li>Autenticación con JWT y OAuth (Google y GitHub).</li>
+              <li>Despliegue en Render, Vercel y Railway con documentación profesional.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="educacion contenedor" id="educacion">
+        <h2 class="educacion__titulo">Educación</h2>
+        <div class="educacion__contenedor">
+
+          <div class="educacion__item" data-aos="fade-up">
+            <h3 class="educacion__grado">Ingeniería de Sistemas</h3>
+            <span class="educacion__fecha">Universidad de Córdoba · Ene 2018</span>
+            <ul class="experiencia__lista">
+              <li>Desarrollo de software de calidad aplicando ingeniería moderna.</li>
+              <li>Proyectos en tecnologías informáticas y telecomunicaciones.</li>
+              <li>Gestión y dirección de empresas tecnológicas.</li>
+            </ul>
+          </div>
+
+          <div class="educacion__item" data-aos="fade-up">
+            <h3 class="educacion__grado">Certificación en Ciberseguridad y Hacking Ético</h3>
+            <span class="educacion__fecha">MinTIC + Univ. Distrital · Marzo 2024</span>
+            <ul class="experiencia__lista">
+              <li>Autenticación, antivirus, seguridad web y 2FA.</li>
+              <li>Herramientas y prácticas de hacking ético.</li>
+            </ul>
+          </div>
+
+          <div class="educacion__item" data-aos="fade-up">
+            <h3 class="educacion__grado">Certificación en Análisis de Datos</h3>
+            <span class="educacion__fecha">FreeCodeCamp · Octubre 2023</span>
+            <ul class="experiencia__lista">
+              <li>Python, Pandas, NumPy, SQL, Visualización con Matplotlib y Seaborn.</li>
+            </ul>
+          </div>
+
+          <div class="educacion__item" data-aos="fade-up">
+            <h3 class="educacion__grado">Certificación Full Stack Developer</h3>
+            <span class="educacion__fecha">Curso Web (PHP, Angular, React, NodeJS) · 2024 - 2025</span>
+            <ul class="experiencia__lista">
+              <li>Angular, React, NodeJS, FastAPI, PHP, WordPress, Python.</li>
+              <li>Backends con Express y FastAPI. Frontends con TypeScript.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="servicios" class="servicios">
+            <h2>Servicios</h2>
+            <div class="servicios__grid">
+              <div data-aos="fade-right">
+                <div class="servicio">
+                  <div class="servicio__imagen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"  width="50px" height="50px">
+                      <path
+                        fill="#14ACC7"
+                        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+                       
+                      />
+                    </svg>
+                  </div>
+                  <div class="servicio__contenido">
+                    <h3 class="servicio__titulo">Diseño Web</h3>
+                    <p class="servicio__texto">
+                      Maquetación de interfaces web basadas en diseños visuales creados en Figma. 
+                      Transformo ideas en estructuras organizadas y listas para ser codificadas con HTML, CSS 
+                      y tecnologías modernas.
+                    </p>
+                  </div>
+                </div>
+                <!-- servicio -->
+              </div>
+
+              <div data-aos="fade-down">
+                <div class="servicio">
+                  <div class="servicio__imagen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="50px" height="50px">
+                      <path
+                        fill="#14ACC7"
+                        d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="servicio__contenido">
+                    <h3 class="servicio__titulo">Aplicaciones Web</h3>
+                    <p class="servicio__texto">
+                      Desarrollo de aplicaciones y sitios web dinámicos, responsivos y funcionales, utilizando 
+                      tecnologías actuales para ofrecer soluciones eficientes, modernas y adaptadas a 
+                      las necesidades del usuario.
+                    </p>
+                  </div>
+                </div>
+                <!-- servicio -->
+              </div>
+
+              <div data-aos="fade-left">
+                <div class="servicio">
+                  <div class="servicio__imagen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50px" height="50px">
+                      <path
+                        fill="#14ACC7"
+                        d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="servicio__contenido">
+                    <h3 class="servicio__titulo">Soporte Técnico Web</h3>
+                    <p class="servicio__texto">
+                      Brindo soporte técnico a sitios web existentes, realizando ajustes de contenido, 
+                      correcciones y mantenimiento general para asegurar su correcto funcionamiento.
+                    </p>
+                  </div>
+                </div>
+                <!-- servicio -->
+              </div>
+            </div>
+            <!-- servicio__grid -->
+      </section>
+
+      <section id="proyectos" class="proyectos">
+            <h2 class="proyectos__titulo">Proyectos</h2>
+            <div class="proyectos__grid">
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img
+                      loading="lazy"
+                      src="build/img/blog_cafe.webp"
+                      alt="blog de cafe"
+                    />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">Blog de Café</h3>
+                    <p class="proyecto__descripcion">
+                      Sitio web tipo blog sobre café, desarrollada con HTML y CSS
+                      utilizando Flexbox, Grid y diseño responsive para adaptarse a
+                      distintos dispositivos.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://jolly-gumdrop-89b4ad.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img loading="lazy" src="build/img/nucleus.png" alt="nucleus" />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">Nucleus</h3>
+                    <p class="proyecto__descripcion">
+                      Sitio web para enviar y recibir pagos en línea, desarrollado
+                      con HTML y CSS usando Flexbox, Grid y diseño responsive para
+                      múltiples dispositivos.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://papaya-daifuku-9f8656.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img
+                      loading="lazy"
+                      src="build/img/arquitecturaBosque.webp"
+                      alt="arquitectura Bosque"
+                    />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">Arquitectura Bosque</h3>
+                    <p class="proyecto__descripcion">
+                      Sitio web de una empresa que construye casas en el bosque,
+                      hecha con HTML y CSS usando Flexbox, Grid y diseño responsive
+                      para múltiples dispositivos.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://velvety-concha-6baea3.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img
+                      loading="lazy"
+                      src="build/img/guitarLa.webp"
+                      alt="guitar La"
+                    />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">GuirarLa</h3>
+                    <p class="proyecto__descripcion">
+                      Sitio web para ventas de guitarras, hecha con HTML y CSS
+                      usando Flexbox, animaciones, Grid y diseño responsive para
+                      múltiples dispositivos.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://warm-quokka-e19806.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img
+                      loading="lazy"
+                      src="build/img/festival.webp"
+                      alt="festival"
+                    />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">Festival de Música</h3>
+                    <p class="proyecto__descripcion">
+                      Sitio web para un festival de música, creado con HTML, SASS,
+                      Node.js, Gulp y JavaScript, usando Flexbox, Css Grid y diseño
+                      responsive para todo tipo de dispositivos.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://thunderous-horse-38ccdd.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+
+              <div data-aos="fade-right">
+                <div class="proyecto">
+                  <div class="proyecto__imagen">
+                    <img
+                      loading="lazy"
+                      src="build/img/card.webp"
+                      alt="festival"
+                    />
+                  </div>
+                  <div class="proyecto__informacion">
+                    <h3 class="proyecto__titulo">Card Interactiva</h3>
+                    <p class="proyecto__descripcion">
+                      Proyecto web interactivo que simula una tarjeta de débito en tiempo real. 
+                      El usuario completa un formulario con datos típicos de una tarjeta y al validar correctamente la información, los datos 
+                      se actualizan dinámicamente en el DOM y se reflejan en dos tarjetas visuales representadas en pantalla.
+                    </p>
+
+                    <div class="proyecto__botones">
+                      <a
+                        class="proyecto__boton"
+                        href="https://taupe-bombolone-1bbec5.netlify.app/?#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Visitar sitio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- proyecto -->
+              </div>
+            </div>
+            <!-- proyecto__grid -->
+      </section>
+
+      <section class="referencias" id="referencias">
+        <h2 class="referencias__titulo">Referencias</h2>
+
+        <div class="referencias__grid">
+          
+          <div class="referencias__item">
+            <h3>Ángel Darío Pinto Mangones</h3>
+            <p><strong>Cargo:</strong> Director del Doctorado en Tecnologías de la Información</p>
+            <p><strong>Empresa:</strong> Universidad del Sinú</p>
+            <p class="referencias__item__contacto">Celular: +57 313 744 7400</p>
+          </div>
+
+          <div class="referencias__item">
+            <h3>Jesús David Villadiego Arteaga</h3>
+            <p><strong>Cargo:</strong> Administrador Industrial</p>
+            <p><strong>Empresa:</strong> Resiter SAS</p>
+            <p class="referencias__item__contacto">Teléfono: +57 301 574 1642</p>
+          </div>
+
+          <div class="referencias__item">
+            <h3>Ana Victoria Hernández Ochoa</h3>
+            <p><strong>Cargo:</strong> Auxiliar de Cocina</p>
+            <p><strong>Empresa:</strong> SATTVA</p>
+            <p class="referencias__item__contacto">Teléfono: +57 320 642 8557</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto" data-aos="fade-up">
+            <h2 class="contacto__titulo">Contáctame</h2>
+            <div class="contacto__centrar">
+              <div class="presentacion__redes">
+                <a href="https://www.linkedin.com/in/𝚅𝚒𝚌𝚝𝚘𝚛-𝙰𝚕𝚏𝚘𝚗𝚜𝚘-𝚅𝚊𝚛𝚐𝚊𝚜-diaz-6b853a355" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Víctor Vargas">
+                  <div class="linkedin">
+                    <div class="circular">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-labelledby="linkedin-contacto-title">
+                        <title id="linkedin-contacto-title">LinkedIn</title>
+                        <path
+                          fill="#14ACC7"
+                          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                        />
+                      </svg>
+                    </div>
+                    <!-- circular -->
+                  </div>
+                  <!-- linkedin -->
+                </a>
+
+                <a href="https://github.com/INGVictorVargas-Dev-1907" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Víctor Vargas">
+                  <div class="github">
+                    <div class="circular">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" role="img" aria-labelledby="github-contacto-title">
+                        <title id="github-contacto-title">GitHub</title>
+                        <path
+                          fill="#14ACC7"
+                          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                        />
+                      </svg>
+                    </div>
+                    <!-- circular -->
+                  </div>
+                  <!-- github -->
+                </a>
+
+                <a href="mailto:victor19vargas2018@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo electrónico a Víctor Vargas">
+                  <div class="gmail">
+                    <div class="circular">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          fill="#14ACC7"
+                          d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                        />
+                      </svg>
+                    </div>
+                    <!-- circular -->
+                  </div>
+                  <!-- gmail -->
+                </a>
+              </div>
+            </div>
+      </section>
+          <footer class="footer" data-aos="fade-up">
+            <div class="footer__centrar">
+              <nav class="navegacion">
+                <a href="#presentacion" class="navegacion__enlace">Sobre mi</a>
+                <a href="#seccion-descargar-cv" class="navegacion__enlace">Curriculum</a>
+                <a href="#habilidades" class="navegacion__enlace">Habilidades</a>
+                <a href="#experiencia" class="navegacion__enlace">Experiencia</a>
+                <a href="#educacion" class="navegacion__enlace">Educación</a>
+                <a href="#servicios" class="navegacion__enlace">Servicios</a>
+                <a href="#proyectos" class="navegacion__enlace">Proyectos</a>
+                <a href="#referencias" class="navegacion__enlace">Referencias</a>
+                <a href="#contacto" class="navegacion__enlace">Contácto</a>
+              </nav>
+            </div>
+
+            
+
+            
+            <p class="footer__texto">
+              Todos los derechos reservados &copy;Víctor Vargas Díaz <?php echo date('Y')?>
+            </p>
+        </footer>
+      </div>
+      <button id="scrollTopBtn" class="hide"  aria-label="Ir arriba">
+        <svg class="progress-circle" viewBox="0 0 36 36" role="img" aria-labelledby="scroll-progress-title">
+          <title id="scroll-progress-title">Progreso de desplazamiento</title>
+          <path class="track" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32" />
+          <path
+            class="progress"
+            id="progressPath"
+            d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"
+          />
+        </svg>
+
+        <svg
+          class="scroll"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <path
+            d="M168.5 164.5L296.5 292.5c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L160 223.9 57.4 326.5c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l128-128c9.4-9.3 24.6-9.3 34 0z"
+          />
+        </svg>
+      </button>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="build/js/app.js"></script>
+  </body>
+</html>

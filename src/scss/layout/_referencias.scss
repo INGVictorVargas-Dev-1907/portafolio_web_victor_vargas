@@ -1,0 +1,78 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+@use 'sass:color';
+
+.referencias {
+    @include m.separacion;
+
+    &__titulo {
+        color: v.$blanco;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+
+    &__contenedor {
+        display: grid;
+        gap: 3rem;
+
+        @include m.tablet {
+            @include m.grid(2, 3rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 3rem);
+        }
+    }
+
+    &__item {
+        background-color: color.adjust(v.$azulOscuro, $lightness: -3%);
+        box-shadow: 0px 0px 27px 0px rgba(20, 172, 199, 0.75);
+        padding: 3rem;
+        border-radius: 1rem;
+        border: 1px solid v.$azulClaro;
+        color: v.$blanco;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            border-radius: 1rem;
+            background: linear-gradient(270deg, #a855f7, #3b82f6, #06b6d4, #3b82f6, #a855f7);
+            background-size: 400% 400%;
+            animation: runBorder 8s linear infinite;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: v.$azulClaro;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin: 0.4rem 0;
+            color: v.$gris;
+        }
+
+        &__contacto {
+            font-weight: bold;
+        }
+    }
+}

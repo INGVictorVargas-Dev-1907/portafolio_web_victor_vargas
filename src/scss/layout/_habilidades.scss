@@ -1,0 +1,101 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.habilidades{
+    @include m.separacion;
+
+    h2{
+        color: v.$blanco;
+    }
+
+    &__contenedor{
+        position: relative;
+        border-radius: 1rem;
+        padding: 3rem;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            border-radius: 1rem;
+            background: linear-gradient(
+                270deg,
+                #a855f7,
+                #3b82f6,
+                #06b6d4,
+                #3b82f6,
+                #a855f7
+            );
+            background-size: 400% 400%;
+            animation: runBorder 8s linear infinite;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+    }
+    
+
+    &__grid{
+        @include m.tablet {
+            @include m.grid(2,5rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4,5rem);
+        }
+        
+    }
+
+    &__img{
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+    }
+
+    &__nombre{
+        margin: 1.5rem 0 0 0;
+        color: v.$blanco;
+        font-weight: 700;
+    }
+}
+
+/* Animación que hace correr el degradado */
+    @keyframes runBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
+}
+.html,
+.express,
+.css,
+.js,
+.sass,
+.gulp,
+.node,
+.vscode,
+.figma,
+.html,
+.boostrap,
+.tailwind{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid v.$azulClaro;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    
+}

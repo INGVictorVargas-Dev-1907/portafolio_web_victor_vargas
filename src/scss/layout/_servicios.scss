@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color";
+
+.servicios {
+    @include m.separacion;
+
+    h2 {
+        color: v.$blanco;
+    }
+
+    @include m.tablet {
+        &__grid {
+            @include m.grid(2, 4rem)
+        }
+    }
+
+    @include m.desktop {
+        &__grid {
+            @include m.grid(3, 4rem)
+        }
+    }
+}
+
+.servicio {
+    background-color: color.adjust(v.$azulOscuro, $lightness: -3%);
+    box-shadow: 0px 0px 27px 0px rgba(20, 172, 199, 0.75);
+    padding: 4rem;
+    border-radius: 1rem;
+    color: v.$blanco;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    transition: transform 0.3s ease-in-out;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 2px;
+        border-radius: 1rem;
+        max-height: 50rem;
+        background: linear-gradient(
+            270deg,
+            #a855f7,
+            #3b82f6,
+            #06b6d4,
+            #3b82f6,
+            #a855f7
+        );
+        background-size: 400% 400%;
+        animation: runBorder 8s linear infinite;
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+    }
+
+    &__imagen {
+        max-width: 5rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    &__titulo {
+        margin: 0;
+        font-weight: 600;
+        font-size: 2.2rem;
+    }
+
+    &__texto {
+        font-weight: 200;
+        line-height: 2;
+        max-height: 30rem;
+        font-size: 1.6rem;
+    }
+}

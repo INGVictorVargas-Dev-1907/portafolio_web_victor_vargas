@@ -1,0 +1,72 @@
+@use 'sass:color';
+@use '../base/variables' as v;
+
+.crear-proyecto {
+    background-color: #0F1624;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &__titulo {
+        color: v.$blanco;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__campo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__etiqueta {
+        color: v.$blanco;
+        margin-bottom: 0.8rem;
+        font-weight: bold;
+    }
+
+    &__input,
+    &__textarea {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        background-color: #1E2A3A;
+        color: v.$blanco;
+    }
+
+    &__input::placeholder {
+        color: #ccc;
+    }
+
+    &__textarea {
+        resize: vertical;
+    }
+
+    &__centrar {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__boton {
+        background-color: #14ACC7;
+        color: v.$blanco;
+        border: none;
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: color.adjust(#14ACC7, $lightness: -10%);
+        }
+    }
+}

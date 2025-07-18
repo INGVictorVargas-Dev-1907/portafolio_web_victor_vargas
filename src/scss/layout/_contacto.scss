@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto{
+    @include m.separacion;
+
+    &__titulo{
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+    }
+
+    &__centrar{
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+    }
+}

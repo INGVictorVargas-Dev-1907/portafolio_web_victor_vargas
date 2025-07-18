@@ -1,0 +1,80 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use "sass:color";
+
+.proyectos {
+    @include m.separacion;
+
+    &__titulo {
+        color: v.$blanco;
+    }
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(2, 4rem)
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 4rem)
+        }
+    }
+}
+
+.proyecto {
+    background-color: color.adjust(v.$azulOscuro, $lightness: -3%);
+    border: 1px solid v.$azulClaro;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    max-height: 60rem;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &__imagen {
+        margin-bottom: 2rem;
+
+        img {
+            height: 18rem;
+        }
+    }
+
+    &__informacion {
+        padding: 2rem;
+        min-height: 10rem;
+    }
+
+    &__titulo {
+        margin: 0;
+        color: v.$blanco;
+        font-weight: 600;
+        font-size: 2.2rem;
+    }
+
+    &__descripcion {
+        color: v.$blanco;
+        line-height: 1.5;
+        font-weight: 200;
+        font-size: 1.7rem;
+    }
+
+    &__botones {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__boton {
+        background: linear-gradient(90deg, rgba(20, 172, 199, 1) 0%, rgba(147, 94, 214, 1) 100%);
+        font-size: 1.5rem;
+        color: v.$blanco;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+    }
+}

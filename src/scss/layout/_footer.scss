@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding: 3rem 0;
+
+    &__texto{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    &__centrar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -6rem;
+    }
+}
